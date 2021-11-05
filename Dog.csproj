@@ -32,6 +32,12 @@
         <ApplicationIcon>icon.ico</ApplicationIcon>
     </PropertyGroup>
     <ItemGroup>
+      <Compile Remove="UndertaleModLib\**" />
+      <EmbeddedResource Remove="UndertaleModLib\**" />
+      <None Remove="UndertaleModLib\**" />
+      <Page Remove="UndertaleModLib\**" />
+    </ItemGroup>
+    <ItemGroup>
         <None Update="About_Profile_Mode.txt">
             <CopyToOutputDirectory>Never</CopyToOutputDirectory>
             <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
@@ -4004,7 +4010,7 @@
         </None>
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\UndertaleModLib\UndertaleModLib.csproj" />
+        <ProjectReference Include="UndertaleModLib\UndertaleModLib.csproj" />
     </ItemGroup>
     <ItemGroup>
         <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
@@ -4170,6 +4176,12 @@
         <Content Include="appsettings.json">
             <CopyToOutputDirectory>Never</CopyToOutputDirectory>
         </Content>
+    </ItemGroup>
+    <ItemGroup>
+      <None Include="FodyWeavers.xsd" />
+    </ItemGroup>
+    <ItemGroup>
+      <Page Include="App.xaml" />
     </ItemGroup>
     <ItemGroup>
         <TrimmerRootAssembly Include="System.Runtime" />
